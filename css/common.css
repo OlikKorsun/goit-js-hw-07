@@ -117,3 +117,20 @@ input {
   align-items: center;
   justify-content: center;
  }
+
+ #controls {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 32px;
+  align-items: flex-start;
+ }
+
+ #boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 32px;
+  align-items: flex-start;
+ }
