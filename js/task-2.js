@@ -32,6 +32,6 @@ const gallery = document.querySelector(".gallery");
 const htmlListOfGallery = [];
 
 for (let i = 0; i < images.length; i++) {
-  htmlListOfGallery.push(`<li><img src="${images[i].url}" alt="${images[i].alt}" width=360 height=300></li>`);
+  htmlListOfGallery.push(`<li><img src="${images[i].url}" alt="${images[i].alt}" width="360" height="300"></li>`);
 }
 gallery.insertAdjacentHTML("afterbegin", htmlListOfGallery.join(""));

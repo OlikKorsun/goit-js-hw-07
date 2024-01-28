@@ -2,11 +2,11 @@ const ourTextOutput = document.querySelector("#name-output");
 const ourTextInput = document.querySelector("#name-input");
 
 function handleInput(event) {
-    console.log(event.target.value);
-    if (event.target.value.trim() === "") {
+    const userName = event.target.value.trim();
+    if (userName === "") {
         ourTextOutput.textContent = "Anonymous";
     } else {
-        ourTextOutput.textContent = event.target.value;
+        ourTextOutput.textContent = userName;
     }
 }
 

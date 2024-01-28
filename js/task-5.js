@@ -8,11 +8,11 @@ const changeColorButton = document.querySelector(".change-color");
 
 function changeColor() {
   const currentColor = getRandomHexColor();
-  const elemDiv = document.querySelector(".widget");
-  const spanTextColor = document.querySelector(".color");
+  const elemDiv = document.querySelector("body");
+  const spanColor = document.querySelector(".color");
 
   elemDiv.style.backgroundColor = currentColor;
-  spanTextColor.textContent = currentColor;  
+  spanColor.textContent = currentColor;  
 }
 
 changeColorButton.addEventListener("click", changeColor);

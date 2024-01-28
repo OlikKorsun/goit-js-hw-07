@@ -4,7 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const ourInput = document.querySelector("#controls").querySelector("input");
+const ourInput = document.querySelector("#controls input");
 const buttonCreate = document.querySelector("button[data-create]");
 const buttonDestroy = document.querySelector("button[data-destroy]");
 const divWithBoxes = document.querySelector("#boxes");
@@ -12,7 +12,7 @@ const divWithBoxes = document.querySelector("#boxes");
 function createBoxes() {
   const amount = parseInt(ourInput.value);
   if ((amount >= 1) && (amount <= 100)) {
-    if (divWithBoxes.hasChildNodes) {
+    if (divWithBoxes.hasChildNodes()) {
     destroyBoxes()
   }
   for (let i = 0; i < amount; i++) {
@@ -27,10 +27,6 @@ function createBoxes() {
 }
 
 function destroyBoxes() {
-  // if (divWithBoxes.hasChildNodes) {
-  //   divWithBoxes.removeChild(divWithBoxes.firstChild);
-  // } 
-  // прикольно получилось видаляє поелементно - можна як зверху так і знизу
   while (divWithBoxes.firstChild) {
       divWithBoxes.removeChild(divWithBoxes.lastChild);
   }
